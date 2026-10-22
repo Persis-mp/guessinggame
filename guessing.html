@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Guessing Game</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="guessing.css">
+</head>
+<body class="min-h-screen bg-violet-950 flex items-center justify-center p-4">
+  <main class="w-full max-w-md rounded-3xl bg-white p-6 text-center">
+    <h1 class="text-3xl font-bold text-violet-700">Guess the Number</h1>
+
+    <p class="mt-4 text-slate-600">
+      I have selected a number between 1 and 100.
+      Can you guess it?
+    </p>
+
+    <form id="guessForm" class="mt-6">
+      <label for="guess" class="mb-2 block font-semibold">
+        Enter your guess
+      </label>
+
+      <input
+        id="guess"
+        type="number"
+        min="1"
+        max="100"
+        required
+        class="w-full rounded-xl border border-slate-300 p-3 text-center text-xl"
+        placeholder="Enter a number"
+      >
+
+      <button
+        type="submit"
+        class="mt-4 w-full rounded-xl bg-violet-600 p-3 font-bold text-white">
+        Check Guess
+      </button>
+    </form>
+
+    <p id="message" class="mt-5 rounded-xl bg-violet-50 p-4 text-violet-900">
+      Start guessing!
+    </p>
+
+    <p class="mt-4 text-slate-700">
+      Attempts: <span id="attempts">0</span>
+    </p>
+
+    <button id="restart"
+      class="mt-5 w-full rounded-xl bg-slate-800 p-3 font-bold text-white">
+      New Game
+    </button>
+  </main>
+
+  <script src="guessing.js"></script>
+</body>
+</html>
